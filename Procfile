@@ -1,0 +1,1 @@
+web: cd CommentsProject && gunicorn CommentsProject.wsgi
