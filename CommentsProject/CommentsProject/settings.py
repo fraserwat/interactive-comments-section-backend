@@ -30,7 +30,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = FALSE
 
-ALLOWED_HOSTS = ["https://fem-comments-section.herokuapp.com"]
+ALLOWED_HOSTS = ["fem-comments-section.herokuapp.com"]
 
 
 # Application definition
