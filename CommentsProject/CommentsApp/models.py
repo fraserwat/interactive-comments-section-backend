@@ -23,7 +23,7 @@ class Comment(models.Model):
 class Upvote(models.Model):
     id = models.AutoField(primary_key=True)
     comment_id = models.ForeignKey(Comment, on_delete=models.PROTECT)  # type: ignore
-    poster_id = models.ForeignKey(Poster, blank=True, on_delete=models.PROTECT)  # type: ignore
+    poster_id = models.ForeignKey(Poster, null=True, blank=True, on_delete=models.PROTECT)  # type: ignore
     modifier = models.IntegerField(
         default=1, validators=[MinValueValidator(-1), MaxValueValidator(1)]
     )
