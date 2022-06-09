@@ -13,7 +13,7 @@ class Poster(models.Model):
 
 class Comment(models.Model):
     id = models.AutoField(primary_key=True)
-    parent_id = models.ForeignKey("self", blank=True, null=True, related_name="id")  # type: ignore
+    parent_id = models.ForeignKey("self", blank=True, null=True, related_name="id", on_delete=models.PROTECT)  # type: ignore
     poster_id = models.ForeignKey(Poster, on_delete=models.PROTECT)  # type: ignore
     commented_at = models.DateTimeField(auto_now_add=True)
     deleted_at = models.DateTimeField(null=True)
